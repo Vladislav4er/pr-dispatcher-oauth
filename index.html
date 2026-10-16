@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="pr-dispatcher — приложение для подбора ревьюверов pull request с учётом их доступности.">
+  <title>pr-dispatcher</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="index.html">pr-dispatcher</a>
+    <nav aria-label="Разделы сайта">
+      <a href="index.html" aria-current="page">Описание</a>
+      <a href="privacy.html">Конфиденциальность</a>
+      <a href="terms.html">Условия</a>
+    </nav>
+  </header>
+  <main>
+    <p class="eyebrow">PR Review Dispatcher</p>
+    <h1>Подбор ревьюверов с учётом доступности</h1>
+    <p class="lead">pr-dispatcher помогает команде назначать ревьюверов на pull request,
+      учитывая экспертизу, нагрузку и календарь отпусков.</p>
+    <section>
+      <h2>Для чего нужен доступ к Google Sheets</h2>
+      <p>Приложение читает настроенную владельцем таблицу отпусков и исключает
+        недоступных участников из подбора. Если у ушедшего в отпуск ревьювера
+        остались активные назначения, приложение может подобрать ему замену.</p>
+      <p>Подключение использует разрешение <code>spreadsheets.readonly</code>.
+        Оно позволяет читать доступные Google-учётной записи таблицы.
+        Приложение обращается к документу и вкладке, указанным в его настройках,
+        и не изменяет Google-таблицы.</p>
+    </section>
+    <section>
+      <h2>Как используется приложение</h2>
+      <p>Это приложение для настроенной командной инсталляции. Оператор подключает
+        свои системы проверки кода и Google-учётную запись с доступом к календарю.
+        Этот сайт содержит описание приложения и условия обработки данных;
+        подключение аккаунта выполняется через отдельный экран согласия Google.</p>
+      <p>Подробности о данных, получателях, хранении и отключении доступа приведены
+        в <a href="privacy.html">политике конфиденциальности</a>.
+        Правила использования приведены в <a href="terms.html">условиях использования</a>.</p>
+    </section>
+  </main>
+  <footer>Владелец и контакт приложения: <a href="mailto:vladislav4er@gmail.com">vladislav4er@gmail.com</a></footer>
+</body>
+</html>
